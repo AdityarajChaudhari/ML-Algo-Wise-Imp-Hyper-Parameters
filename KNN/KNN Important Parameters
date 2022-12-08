@@ -1,27 +1,31 @@
 KNN is a distance based model to make the predictions. It has some of the important hyperparameters which can hugely influence the outcome, let's see these important hyper parameters.
 
-K Neighbors Classifier :- 
+X - K Neighbors Classifier :- 
 
 class sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, *, weights='uniform', algorithm='auto', leaf_size=30, p=2, metric='minkowski', metric_params=None, n_jobs=None, **kwargs)
 
-K Neighbors Regressor :- 
+X - K Neighbors Regressor :- 
 
 class sklearn.neighbors.KNeighborsRegressor(n_neighbors=5, *, weights='uniform', algorithm='auto', leaf_size=30, p=2, metric='minkowski', metric_params=None, n_jobs=None)
 
-n_neighbors :- 
+
+
+1 - n_neighbors :- 
 nearest number of neighbors
 
 The number of neighbors required to make the prediction.
 
-weights :- {'uniform','distance'}
+
+2 - weights :- {'uniform','distance'}
 1 - uniform :-
     Equal Weightage to all points
 2 - distance :- 
     No equal weightage 
     
 This parameters is used to assign weights (say 'importance'). If we choose uniform then equal importance is given to all points. If we choose 'distance'then the points closer will be given more importance than farther points.
-    
-algorithm{‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, default=’auto’
+ 
+ 
+3 - algorithm{‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’}, default=’auto’
 Algorithm used to compute the nearest neighbors:
 
 If we choose ‘ball_tree’ then model will use the BallTree algorithm at it's core. BallTree uses DivisiveClustering approach as it's core.
@@ -32,17 +36,20 @@ If we choose ‘brute’ then the model will use a brute-force approach. It's no
 
 ‘auto’ will attempt to decide the most appropriate algorithm based on the values passed to fit method.
 
-leaf_size :-
+
+4 - leaf_size :-
 Used mainly for kd-tree 
 
 As we discussed Kd tree uses tree based approach and in case of leaf_size, if the model is using only KD tree at it's core then only this hyper parameter will be considered else it will be overlooked.
 
-p :-
+
+5 - p :-
 p=1 represents manhattan distance and p=2 represents eucledian distance.p is the power parameter used in Minkowski distance
 
 'p' hyper parameter is basically used to select the type of distance calculation we need to use.
 
-metric :-
+
+6 - metric :-
 minkowski is by default we can change if by default by changing values of p.Other distance metrics are chebyshev,seucledian,etc.
 
 These all are the important parameters for KNC and KNR and to choose the best parameters we can do hyperparameter tuning.
