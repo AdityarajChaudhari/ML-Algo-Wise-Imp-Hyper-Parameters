@@ -17,12 +17,12 @@ class sklearn.ensemble.RandomForestRegressor(n_estimators=100, *, criterion='squ
 *NOTE - Base_estimators are referred as Internal Decision Trees for ease of understanding.
 
 
-## 1 - n_estimators (default=100)
+▶ 1 - n_estimators (default=100)
 
 The Number of decision trees to be used for building the model and give predictions.
 
 
-2 - criterion (default = 'gini' - In case of Classification) & (default = 'squared_error' - In case of Regression)
+▶ 2 - criterion (default = 'gini' - In case of Classification) & (default = 'squared_error' - In case of Regression)
 
 ⭐ For Classification - 
 
@@ -40,29 +40,32 @@ The Number of decision trees to be used for building the model and give predicti
 The type of Mechanism required to split the internal decision trees. Yes! every internal decision trees will be split on the selected criterion.
 
 
-3 - max_depth (default=None)
+▶ 3 - max_depth (default=None)
 
 This hyperparameter helps in deciding the height of the internal decision trees.
 
 
-4 - min_samples_split (default=2) 
+▶ 4 - min_samples_split (default=2) 
 
 It tells us the minimum number of samples in the node required to split that node in two. For eg - If we set min_samples_split = 35 then, 
 i  - If there are 40 samples in the node then the node will split further.
 ii - If there are 30 samples in the node then the node will not split further.
 
 
-5 - min_samples_leaf (default=1)
+▶ 5 - min_samples_leaf (default=1)
 
 It tells us about the minimum number of samples there should be at the leaf node(last node). For eg - If we set min_samples_leaf = 50 then, the splitting of the particuar node will stop if the number of samples in that node will be 50 or less and that node will become leaf node.
 
 
-6 - max_features (default='sqrt')
+▶ 6 - max_features (default='sqrt')
+
+1 - sqrt
+2 - log2 
 
 As we know that Random Forest uses feature bootstrapping, this feature is used for that purpose. If there are 25 features then if we use 'sqrt' then [sqrt(features) = sqrt(25) = 5], 5 random features will be used for building and predicting on internal decision trees.
 
 
-7 - max_samples (default=None)
+▶ 7 - max_samples (default=None)
 
 It can only be used if bootstrap=True. Basically it helps us to decide the number of random samples to be used to train the internal decision trees.
 
