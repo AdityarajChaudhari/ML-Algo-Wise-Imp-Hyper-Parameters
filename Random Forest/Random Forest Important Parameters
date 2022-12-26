@@ -17,7 +17,7 @@ class sklearn.ensemble.RandomForestRegressor(n_estimators=100, *, criterion='squ
 *NOTE - Base_estimators are referred as Internal Decision Trees for ease of understanding.
 
 
-##1 - n_estimators (default=100)
+## 1 - n_estimators (default=100)
 
 The Number of decision trees to be used for building the model and give predictions.
 
