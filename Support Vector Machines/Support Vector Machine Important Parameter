@@ -1,0 +1,63 @@
+Support Vector Machines is the type of Machine Learning algorithm that works well with Non-Linear type of data (i.e the data that cannot be seperated using one line). Support Vector Machines can operate in number of dimensions as per the requirements.
+
+
+➡ Support Vector Classifier :- *credits - official sci-kit learn documentation
+
+class sklearn.svm.SVC(*, C=1.0, kernel='rbf', degree=3, gamma='scale', coef0=0.0, shrinking=True, probability=False, tol=0.001, cache_size=200, class_weight=None, verbose=False, max_iter=-1, decision_function_shape='ovr', break_ties=False, random_state=None)
+
+➡ Support Vector Regressor :- *credits - official sci-kit learn documentation
+
+class sklearn.svm.SVR(*, kernel='rbf', degree=3, gamma='scale', coef0=0.0, tol=0.001, C=1.0, epsilon=0.1, shrinking=True, cache_size=200, verbose=False, max_iter=-1)
+
+
+💨 IMPORTANT HYPERPARAMETERS 
+
+
+1 - C (default = 1)
+
+Its the regularizatin parameter.It is used to control the error. We know about the margins in SVM. The C value is related to margins. Simple remember, Small C val = Large Margin & Big C val = Small Margin.
+
+
+2 - kernel (default = 'rbf')
+
+1 - Linear
+2 - RBF - (Radial Basis Function)
+3 - Sigmoid
+4 - poly
+
+Just remember, if the data is linearly seperable then make use of linear kernel. The other three kernels are used in non-linearly seperable data. (Basically the last 3 kernels increase the dimension of the data and make predictions).
+
+
+3 - degree (default = 3)
+
+Works only with the polynomial kernel. For understanding - (if degree=3 then one dimensional data can be represented/converted into three dimensions and then prediction can be made)
+
+
+4 - gamma (default = 'auto')
+
+1 - scale
+2 - auto
+
+
+5 - coef0 (default = 0.0)
+
+It only works if the kernels selected are 'poly' and 'sigmoid'.
+
+
+6 - tol 
+
+Its the stopping criterion.
+
+
+7 - decision_function_shape (default = 'ovr') - Only used for classification
+
+1 - OVO (One Versus One)
+2 - OVR (One Versus Rest)
+
+It is used in case of multi class classification problems. Generally One Vs Rest works better in most of the cases.
+
+
+8 - Epsilon (default = 0.1) - Only used for Regression
+
+It specifies the epsilon-tube within which no penalty is associated in the training loss function with points predicted within a distance epsilon from the actual value. Basically the epsilon value increases the distance between the hyperplane and accumalates the data poitns with small errors. (Check on the google for SVR and Epsilon )
+
