@@ -9,7 +9,7 @@ Machine Learning is used widely in various fields and the use of Machine Learnin
 
 
 
-## 💨 CONTRIBUTOR/AUTHOR 👨‍💻
+💨 CONTRIBUTOR/AUTHOR 👨‍💻
 
 **Adityaraj Hemant Chaudhari.**
 
