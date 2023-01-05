@@ -1,0 +1,73 @@
+Decision Tree is one of the most famous Machine Learning algorithm that can be used for classification as well as regression. It is the base of many of the other algorithms like Random Forests, XGBoost and many more..Let's see some of the important hyperparamters of Decision Tree.
+
+
+➡ Decision Tree Classifier :- *credits - official sci-kit learn documentation
+
+class sklearn.tree.DecisionTreeClassifier(*, criterion='gini', splitter='best', max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, class_weight=None, ccp_alpha=0.0)
+
+
+➡ Decision Tree Regressor :- *credits - official sci-kit learn documentation
+
+class sklearn.tree.DecisionTreeRegressor(*, criterion='squared_error', splitter='best', max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, ccp_alpha=0.0)
+
+
+💨 IMPORTANT HYPERPARAMETERS 
+
+
+1 - criterion (default = 'gini' - In case of Classification) & (default = 'squared_error' - In case of Regression)
+
+⭐ For Classification - 
+
+1 - gini
+2 - entropy
+3 - log_loss
+
+⭐ For Regression - 
+
+1 - squared_error
+2 - friedman_mse
+3 - absolute_error
+4 - poisson
+
+This parameter is basically used to decide how the decision tree should be splitted. These mentioned above are different types of splitting criterion for classification/regression. These all parameters have their own mathematics involved at the backend (for splitting the tree) and based on the criterion selected the decision tree is splitted.
+
+
+2 - splitter (default = 'best')
+
+1 - best
+2 - random
+
+This paramters determines how the tree should be splitted. If 'best' is selected the tree is splitted in best possible way and if 'random' is selected then the split happens randomly. 
+(Note :- if splitter='random' then the Classifier/Regressor will be ExtraTrees Classifier/Regressor)
+
+
+3 - min_samples_split (default=2) 
+
+It tells us the minimum number of samples in the node required to split that node in two. For eg - If we set min_samples_split = 35 then, 
+i  - If there are 40 samples in the node then the node will split further.
+ii - If there are 30 samples in the node then the node will not split further.
+
+
+4 - max_depth (default=None)
+
+This hyperparameter helps in deciding the height of the internal decision trees.
+
+
+5 - min_samples_leaf (default=1)
+
+It tells us about the minimum number of samples there should be at the leaf node(last node). For eg - If we set min_samples_leaf = 50 then, the splitting of the particuar node will stop if the number of samples in that node will be 50 or less and that node will become leaf node.
+
+
+6 - max_features (default='sqrt')
+
+As we know that Random Forest uses feature bootstrapping, this feature is used for that purpose. If there are 25 features then if we use 'sqrt' then [sqrt(features) = sqrt(25) = 5], 5 random features will be used for building and predicting on internal decision trees.
+
+
+7 - max_leaf_nodes (default=None)
+
+It describes the number of leaf nodes there should be in decision tree
+
+
+8 - ccp_alpha (default = 0.0)
+
+It is decision tree Pruning parameter.See more in the practical implementation part.
